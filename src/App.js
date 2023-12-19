@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react'
 import About from './components/About';
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
 
@@ -41,25 +41,26 @@ const toggleMode = ()=>{
 
 
 
-<Navbar title="SAKTIMAN - capitalize your text" mode={mode} toggleMode={toggleMode}/>
+
+
+ {/* <About/>
+
+<TextForm heading="Enter your text here" mode={mode} showAlert={showAlert} />  */}
+
+
+
+
+
+
+<BrowserRouter>
+<Navbar title="SAKTIMAN" mode={mode} toggleMode={toggleMode}/>
 <Alert alert={alert} />
 
-
- <About/>
-
-<TextForm heading="Enter your text here" mode={mode} showAlert={showAlert} /> 
-
-
-
-
-
-
-{/* <BrowserRouter>
 <Routes>
 <Route path="/about" element={<About />}></Route>
 <Route path="/" element={<TextForm heading="Enter your text here" mode={mode} showAlert={showAlert} /> }></Route>
   </Routes>
-</BrowserRouter> */}
+</BrowserRouter>
 
 
 
