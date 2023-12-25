@@ -38,42 +38,15 @@ const toggleMode = ()=>{
   }
   return (
     <>
-
-
-
-
-
- {/* <About/>
-
-<TextForm heading="Enter your text here" mode={mode} showAlert={showAlert} />  */}
-
-
-
-
-
-
 <BrowserRouter>
 <Navbar title="SAKTIMAN" mode={mode} toggleMode={toggleMode}/>
 <Alert alert={alert} />
 
 <Routes>
-<Route path="/about" element={<About />}></Route>
-<Route path="/" element={<TextForm heading="Enter your text here" mode={mode} showAlert={showAlert} /> }></Route>
+<Route exact path="/about" element={<About mode={mode}/>}></Route>
+<Route exact path="/" element={<TextForm heading="Enter your text here" mode={mode} showAlert={showAlert} /> }></Route>
   </Routes>
 </BrowserRouter>
-
-
-
-
-
-
-
-
-
-
-
-
-
 </>
 
   );
